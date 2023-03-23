@@ -77,20 +77,21 @@ namespace ConsoleUI
             vehicles.Add(car1);
             vehicles.Add(motorcycle);
             vehicles.Add(vehicle1);
-            vehicles.Add(vehicle2); 
+            vehicles.Add(vehicle2);
 
+            // Call each of the drive methods for one car and one motorcycle
             foreach (var vehicle in vehicles)
             {
                 Console.WriteLine($"Year: {vehicle.Year}");
                 Console.WriteLine($"Make: {vehicle.Make}");
                 Console.WriteLine($"Model: {vehicle.Model}");
-                Console.WriteLine();
                 vehicle.DriveAbstract();
                 vehicle.DriveVirtual();
                 Console.WriteLine();
             }
 
-            #endregion           
+            #endregion
+            Console.ReadLine();
         }
     }
 }
